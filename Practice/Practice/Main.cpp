@@ -4,7 +4,15 @@
 #include <string>
 #include <algorithm>
 #include <limits>
+#include <queue>
+#include <stack>
+#include <set>
+#include <unordered_set>
+#include <list>
+#include <forward_list>
 using namespace std;
+
+#include "Source.cpp";
 
 //define
 #define all(v) v.begin(), v.end()
@@ -18,7 +26,29 @@ int countBits(int mask) {
 	return res;
 }
 
+//http://en.cppreference.com/w/cpp/container
 void cheat() {
+	//double linked list
+	list<string> ll;
+
+	//single linked list 
+	forward_list<string> fl;
+
+
+
+	queue<string> myQ; 
+	//myQ.push(value) -> push value to queue
+	//myQ.size() -> return size of queue
+	//myQ.front() -> return first one added
+	//myQ.back() -> return last one added
+	//myQ.pop() -> delete first added 
+
+	stack<string> myS;
+	//myS.push() -> push value
+	//myS.size() -> return size of stack
+	//myS.pop() -> remove top one
+	//myS.top() -> return top one
+
 	vector<int> myVector;
 	//if (find(added.begin(), added.end(), j) != added.end()) -> element found in vector
 
@@ -38,21 +68,17 @@ void cheat() {
 	//.insert(index, string, start, length) -> insert string BEFORE index...string is subst (start->length)-> ORIGINAL is overwritten
 	//.substr(start, length) -> NOT OverWritten  original string
 
-	string insertA = "ABCDE";
-	cout << myString.insert(4, insertA, 1, 3) << endl;
-
-	cout << myString.substr(0, 3) << endl;
-
-	cout << myString.find("0");
 }
 
 int main() {
 	string line;
 
-	int bits = countBits(15);
+	Birthday bd;
+	string c = "06/17";
+	vector<string> b = { "02/17 Wernie", "10/12 Stefan" };
 
-	cout << bits << endl;
-		
+	cout << bd.getNext(c, b);
+
 	getline(cin, line);
 	return 0;
 }
