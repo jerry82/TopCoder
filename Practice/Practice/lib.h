@@ -7,7 +7,8 @@
 #include <list>
 #include <string>
 #include <algorithm>
-
+#include <limits>
+#include <math.h>
 using namespace std;
 
 #endif

@@ -7,12 +7,16 @@
 #include <queue>
 #include <stack>
 #include <set>
-#include <unordered_set>
+#include <unordered_map>
 #include <list>
 #include <forward_list>
+#include <sstream>
+
+#include "LeetCode.cpp"
+#include "SRM152DIV2.cpp"
+
 using namespace std;
 
-#include "Source.cpp";
 
 //define
 #define all(v) v.begin(), v.end()
@@ -28,14 +32,17 @@ int countBits(int mask) {
 
 //http://en.cppreference.com/w/cpp/container
 void cheat() {
+	
+	unordered_map<int, int> map;
+
+	//map.insert(make_pairt(int, int));
+
 	//double linked list
 	list<string> ll;
+	
 
 	//single linked list 
 	forward_list<string> fl;
-
-
-
 	queue<string> myQ; 
 	//myQ.push(value) -> push value to queue
 	//myQ.size() -> return size of queue
@@ -71,15 +78,18 @@ void cheat() {
 }
 
 int main() {
-	string line;
+	
+	ProblemWriting pw;
+	string form = "9.....*8..+.3./.";
 
-	Birthday bd;
-	string c = "06/17";
-	vector<string> b = { "02/17 Wernie", "10/12 Stefan" };
+	cout << pw.myCheckData(form) << endl;
 
-	cout << bd.getNext(c, b);
-
-	getline(cin, line);
+	int T; 
+	cin >> T;
 	return 0;
 }
+
+
+
+
 
